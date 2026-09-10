@@ -1,7 +1,7 @@
 package multiThreading.threadMethods03;
 
-public class daemonThread {
-    public static void main(String[] args) {
+public class daemonThread08 {
+    public static void main(String[] args) throws InterruptedException {
         Thread t1=new Thread(()->{
             while(true) {
                 System.out.println("Running...");
@@ -9,6 +9,8 @@ public class daemonThread {
         });
         t1.setDaemon(true);
         t1.start();
+
+        Thread.sleep(2000);
     }
 }
 /*
